@@ -8,21 +8,19 @@ Nowadays, the media is full of overwhelming information in different topics and 
 
 1. What are the most hot topics during the selected time period?
 2. How does the clout of these hot topic vary during the period of time?
-3. What are the attitudes of different media towards these topics?
-4. Do attitudes towards these topics vary between different press?
-5. Do attitudes towards these topics change during the period of time for specific press or speaker? 
+3. Do attitudes towards these topics vary between different press?
+4. Do attitudes towards these topics change during the period of time for specific press or speaker? 
 
 
-# Additional database : 
+# Proposed Database : 
 
  
 # Methods : 
-
 ### Data Cleaning, Preprocessing and Initial Analysis:
 The first step of data cleaning and preprocessing is to group quotations in the dataset according to date. As our main task is to find hot topics in the Quotebank Dataset, combining the quotations on the same day will not affect the occurrence of different topics. Non-ascii characters are removed and texts are standardized to facilitate the tokenization process of the dataset. Tokenization and lemmatization are accomplished to facilitate the Tfidf vectorization.
 
 ### Hot Topic extraction and Analysis:
-To find the most hot topic during the selected time period, we need to extract the key topics in different documents. We use Latent Dirichlet Allocation (LDA) to model all the documents to topics in a way such that the words in each document are mostly captured by those topics. After extracting hot topics, we can classify different quotations related to the hot topics. This result can be applied to further analysis on the hot topics and data visualization.  
+To find the most hot topic during the selected time period, we need to extract the key topics in different documents.We will use Latent Semantic Analysis(LSA) and Latent Dirichlet Allocation (LDA) for topic modeling. Latent Semantic Analysis is based on a principle called the distributional hypothesis: words and expressions that occur in similar pieces of text will have similar meanings. We also use Latent Dirichlet Allocation (LDA) to model all the documents to topics in a way such that the words in each document are mostly captured by those topics. After extracting hot topics, we can classify different quotations related to the hot topics. This result can be applied to further analysis on the hot topics and data visualization.  
 
 ### Sentiment Analysis
 After classifying quotations into different topics, we will apply sentiment analysis on different quotations related to the same topic. Then we can accomplish further analysis on attitudes and the change of attitudes related to differents topics.
