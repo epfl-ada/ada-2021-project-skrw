@@ -1,28 +1,36 @@
-# Hot Topic Detection and Analysis
+# Quotations Behind Brexit
 
 # Abstract  (150 words):
 
-Nowadays, the media is full of overwhelming information on different topics and different areas. Although a large amount of data is helpful in big data mining, most of the data is not meaningful to us. In order to extract meaningful information from a large dataset that contains millions of quotations, trending topic analysis is a Natural Language Processing (NLP) technique that allows us to automatically extract meaningful information from text by identifying recurrent themes or topics. Hot topic analysis can help provide any meaningful information to be used in many recommendation systems, for example, social media monitoring tools and marketing.
+Brexit (a portmanteau of "British exit") was the withdrawal of the United Kingdom (UK) from the European Union (EU) at 23:00 GMT on 31 January 2020 (00:00 CET). The UK is the first and so far the only member state to have left the EU, after 47 years of having been a part of the union — the EU and its predecessor the European Communities (EC), which included the European Economic Community — since 1 January 1973. Actually, the United Kindom was considering about exiting the EU ever since 2016. After several referendums and negotiations between UK-EU, they finally exit the EU in early January, 2020. And the withdrawl aggrement finally came into force on 31 January 2020.
+
+In our project, we would like to dive into quotations talking about the Brexit and analyze information behind these quotations to learn about people's attitude through the whole event.
 
 # Research questions : 
+1. What are the distribution characteristics of quotations about the Brexit?
 
-1. What are the hottest topics during the selected time period?
-This is the key problem of our project. We would like to extract the hottest topics during the selected period of time. This enables us to have a more direct understanding of what topics are more prevalent, as this reveals what are people focusing on. A possible hot topic in 2019 might be global climate change, as Greta Thunberg had continuously taken action to propel activities to fight against global climate change. 
-2. How does the clout of these hot topics vary during the period of time?
-It's obvious that the clout of these hot topics would change continuously. This analysis can also be interesting because we can have a direct visualization of how people's interests in different topics vary.
-3. Do attitudes towards these topics vary between different presses?
-People's attitudes towards these topics are also an interesting task. Quotations we have in the database reveal the speakers' attitudes towards the specific topic. What's more, it's also an interesting analysis to find out whether the attitudes towards specific topics change. For example, people's attitude towards global climate change might be negative in the beginning, as people might think this will not be a big problem. But after a period of time, people might feel that global climate change has become a big problem for our human beings and then their attitudes might change.
-4. Do attitudes towards these topics differ between different speakers? 
-After analyzing the scope of time, it can be also interesting to analyze the scope of people. By analyzing attitudes towards the same topic between different speakers, we can find out whether speakers' attitudes have some differences.
+Analyzing the distribution characteristics is the elementary problem to be solved when we are trying to analyze quotations talking about the Brexit. This analysis is based on different characteristics of speakers' of these quotations, as this reveals what kind of speaker tends to express their opinions on the Brexit. For example, we can analyze the nationality, the gender, the occupation of these speakers. This helps us sketch the group of people cares about the Brexit. What's more, we can also analysis the change of the number of quotations from 2016 to 2020, which reveals the popularity change of the topic, Brexit, during this time period.
 
+2. What are the topics related to the Brexit during this time period?
+
+Topic detection is also an interesting problem to be solved. We would like to extract the top topics related to the Brexit. This enables us to have a more detailed understanding of what speakers pay attention to when they talk about the Brexit. For example, we may find that top topics related to the Brexit is about people or business. This means that when people talk about the Brexit, they tend to pay attention to what the Brexit may lead to on people's life and the business relationship between the UK and the EU.
+
+3. Do attitudes towards the Brexit vary during this period of time?
+People's attitudes towards the Brexit are also worth analyzing. Quotations we have in the database reveal the speakers' attitudes towards the Brexit. What's more, it's also an interesting analysis to find out whether the attitudes towards the Brexit change. For example, people might be negative towards the Brexit in the beginning. But after a period of time, they may change their mind to postive. Maybe they are persuaded that this have more postive effects by other speakers.
 
 # Proposed Database : 
 quotes-2019.json.bz2: To analyze the hot topics in 2019, we use the Quotation-centric version of the dataset for the year 2019. The quotation-centric version of the dataset is an aggregated set of unique quotations, which is minimal but sufficient for us to find the hot topics of the year as we don't need the information of the context. 
 
+**speaker_attributes.parquet**: Additional metadata about the speakers in the Quotebank dataset. This dataset gives us additional information about speakers we are interested in to help us analyze the distribution characteristics of quotations about the Brexit
+
+**wikidata_labels_descriptions_quotebank.csv.bz2**： This dataset helps us to extract the aforementioned information about speakers from the Wikidata knowledge base.
  
 # Methods : 
-### Data Cleaning, Preprocessing, and Initial Analysis:
-The first step of data cleaning and preprocessing is to group quotations in the dataset according to date. As our main task is to find hot topics in the Quotebank Dataset, combining the quotations on the same day will not affect the occurrence of different topics. Non-ASCII characters are removed and texts are standardized to facilitate the tokenization process of the dataset. Tokenization and lemmatization are accomplished to facilitate the Tfidf vectorization.
+### Data Cleaning and Preprocessing:
+
+### Enrich dataset:
+After data cleaning and preprocessing, we can get all quotations related to the Brexit in this period of time. As the original dataset only contains very limited information about the speaker, we need to enrich the original dataset with the speaker_attributes.parquet based on the QID of the speaker. What's more, as we need to analyze the distribution of speakers' age range, we need to convert the special format of date of birth into age. With this step, it helps us to accomplish future steps easier.
+
 
 ### Hot Topic extraction and Analysis:
 To find the hottest topic during the selected time period, we need to extract the key topics in different documents. We will use Latent Semantic Analysis(LSA) and Latent Dirichlet Allocation (LDA) for topic modeling. Latent Semantic Analysis is based on a principle called the distributional hypothesis: words and expressions that occur in similar pieces of text will have similar meanings. We also use Latent Dirichlet Allocation (LDA) to model all the documents to topics in a way such that the words in each document are mostly captured by those topics. After extracting hot topics, we can classify different quotations related to the hot topics. This result can be applied to further analysis on hot topics and data visualization.  
