@@ -16,6 +16,7 @@ Analyzing the distribution characteristics is the elementary problem to be solve
 Topic detection is also an interesting problem to be solved. We would like to extract the top topics related to the Brexit. This enables us to have a more detailed understanding of what speakers pay attention to when they talk about the Brexit. For example, we may find that top topics related to the Brexit is about people or business. This means that when people talk about the Brexit, they tend to pay attention to what the Brexit may lead to on people's life and the business relationship between the UK and the EU.
 
 3. Do attitudes towards the Brexit vary during this period of time?
+
 People's attitudes towards the Brexit are also worth analyzing. Quotations we have in the database reveal the speakers' attitudes towards the Brexit. What's more, it's also an interesting analysis to find out whether the attitudes towards the Brexit change. For example, people might be negative towards the Brexit in the beginning. But after a period of time, they may change their mind to postive. Maybe they are persuaded that this have more postive effects by other speakers.
 
 # Proposed Database : 
