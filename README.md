@@ -4,7 +4,7 @@
 
 Brexit (a portmanteau of "British exit") was the withdrawal of the United Kingdom (UK) from the European Union (EU) at 23:00 GMT on 31 January 2020 (00:00 CET). The UK is the first and so far the only member state to have left the EU, after 47 years of having been a part of the union — the EU and its predecessor the European Communities (EC), which included the European Economic Community — since 1 January 1973. Actually, the United Kindom was considering about exiting the EU ever since 2016. After several referendums and negotiations between UK-EU, they finally exit the EU in early January, 2020. And the withdrawl aggrement finally came into force on 31 January 2020.
 
-In our project, we would like to dive into quotations talking about the Brexit and analyze information behind these quotations to learn about people's attitude through the whole event.
+Undoubtely, post-brexit scenario has raised concerns about regional integration and economic security both in the UK and the EU in recent years. Hereby we look forward to shedding some light on these current issues by a full retrospect of Brexit. We'll dive into 95808 quotations talking about the Brexit from 2016 to 2020, summarize characteristics of relevant speakers, extract underlying top topics behind Brexit, and further analyze the changing attitudes of speakers throughout the whole process.
 
 # Research questions : 
 1. What are the distribution characteristics of quotations about the Brexit?
