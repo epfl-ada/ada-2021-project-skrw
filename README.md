@@ -1,5 +1,8 @@
 # Quotations Behind Brexit
 
+The burst of Brexit bubble
+Data story link: https://shanci-li.github.io/
+
 # Abstract  (150 words):
 
 Brexit (a portmanteau of "British exit") was the withdrawal of the United Kingdom (UK) from the European Union (EU) at 23:00 GMT on 31 January 2020 (00:00 CET). Actually, the United Kindom was considering about exiting the EU ever since 2016. After several referendums and negotiations between UK-EU, they finally exit the EU in early January, 2020. And the withdrawl aggrement finally came into force on 31 January 2020.
@@ -34,7 +37,7 @@ After data cleaning and preprocessing, we can get all quotations related to the 
 
 
 ### Hot Topic extraction and Analysis:
-To find the hottest topic during the selected time period, we need to extract the key topics in different documents. We will use Latent Semantic Analysis(LSA) and Latent Dirichlet Allocation (LDA) for topic modeling. Latent Semantic Analysis is based on a principle called the distributional hypothesis: words and expressions that occur in similar pieces of text will have similar meanings. We also use Latent Dirichlet Allocation (LDA) to model all the documents to topics in a way such that the words in each document are mostly captured by those topics. After extracting hot topics, we can classify different quotations related to the hot topics. This result can be applied to further analysis on hot topics and data visualization.  
+To find the hottest topic during the selected time period, we need to extract the key topics in different documents. We will use Latent Dirichlet Allocation (LDA) for topic modeling. Latent Dirichlet Allocation (LDA) is a generative statistical model that allows sets of observations to be explained by unobserved groups that explain why some parts of the data are similar. For example, our observations are words collected into quotations, it posits that each quotation is a mixture of a small number of topics and that each word's presence is attributable to one of the quotation's topics. After extracting hot topics, we can classify different quotations related to the hot topics. This result can be applied to further analysis on hot topics and data visualization.  
 
 ### Sentiment Analysis
 Since the quotation data has no label information, we cannot adopt the supervised machine learning techniques. Here we apply the pretrained model from Transformers to finish the sentiment analysis task.Transformers provides thousands of pretrained models to perform tasks on different modalities such as text, vision, and audio. Transformers provides APIs to quickly download and use those pretrained models on a given text, fine-tune them on your own datasets. To immediately use a model on a given input (text, image, audio, ...), Transformers provides the pipeline API. Pipelines group together a pretrained model with the preprocessing that was used during that model's training. Using the pretrained model, we obtain the positive or negative label of each quotations. This method is a time-consuming task. Therefore, we only do this part toward UK people and save the output so that it is easier for us to load it later.
@@ -54,7 +57,3 @@ Wanting Li: Topic extraction, sentiment analysis, analyze sentiment analysis res
 Kang Fu: Initial data preprocessing and analysis, analyze topic extraction result, data visualization
 
 Runke Zhou: Writing READme for Milestone2, topic extraction, sentiment analysis, data visualization
-
-# Questions for TAs
-1. When doing the lemmatization, what kind of words should we keep, like verb, noun, adjective? Can we remove adverbs?
-2. When using the phrase detection(bigram or trigram), should removing stopwords before this process or after?
