@@ -1,6 +1,4 @@
-# Quotations Behind Brexit
-
-The burst of Brexit bubble
+# The burst of Brexit bubble
 
 Data story link: https://shanci-li.github.io/
 
